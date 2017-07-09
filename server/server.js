@@ -11,7 +11,7 @@ var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler));
 app.use(webpackHotMiddleware(compiler));
 
-app.use(express.static('./dist'));
+app.use(express.static('./public'));
 
 app.use('/*', function (req, res) {
     res.sendFile(path.resolve('client/index.html'));
